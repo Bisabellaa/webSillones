@@ -1,0 +1,289 @@
+/* Selector universal para eliminar todo margen y padding que está por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye el borde y el padding en el ancho y alto */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* ENCABEZADO MENU DE NAVEGACION -----------------------------------------------------------*/
+header {   
+    font-size: 1.5vw;
+    background: linear-gradient(to left, #FAF5E9, #FFCC00);
+    height: 20vh;
+    text-align: center;
+    position: fixed; /* Menu fijo */
+    width: 100%;
+    z-index: 1000;
+    display: flex; /*  alinea elementos */
+    justify-content: center; /* centra horizontalmente*/
+    align-items: center; /* centra verticalmente */
+}
+
+.contenedor-logo {
+    margin-right: 200px; /* Espacio a la derecha del logo */
+}
+
+#logo {
+    width: 9vw;
+    height: 18vh;
+    border-radius: 50%;
+    box-shadow: 1px 2px 2px 2px #009B4D;
+    margin-left: 40px;
+}
+
+.navegador-menu {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.navegador-menu a {
+    text-decoration: none;
+    color: #009B4D;
+    padding: 1vw;
+    margin: 0 10px; /* Espacio entre los enlaces del menú */
+}
+
+.navegador-menu a:hover {
+    text-shadow: 1px 1px 2px rgb(137, 238, 106);
+}
+
+
+/* CONTENIDO MAIN ----------------------------------------------------------------------------------*/
+main {
+    background-color: #FAF5E9;
+}
+
+
+.seccion-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20vh;
+    text-align: center;
+}
+
+.banner img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* altura del banner */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contenido {
+    max-width: 10000px; /* Ancho máximo del contenido */
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+.contenido h1 {
+    font-size: 2.5rem;
+    color: #009B4D;
+    margin-bottom: 10px;
+}
+
+.contenido p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.boton-galeria button{
+        padding: 5px 10px;
+        font-size: 1rem;
+        color: #fff;
+        background-color: #009B4D;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+.boton-galeria button:hover {
+        background-color: #007e3d;
+ }
+
+
+/* GALERIA */
+#galeria {
+    display: flex; /* flexbox para alinear elementos en línea */
+    justify-content: center; /* centra las imagenes horizontalmente */
+    gap: 20px; /* espacio entre las imágenes */
+    padding-top: 25vh; /* espacio para el encabezado */
+}
+
+
+.galeria-item {
+    text-align: center;
+    width: 400px; /* ancho para cada imagen */
+    height: auto; /* alto automático */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden; /* para que las img no salgan de el recuadro */
+    box-shadow: 0 4px 8px rgba(33, 171, 49, 0.767);
+    background: linear-gradient(#FFCC00, #FAF5E9 );
+
+}
+
+.galeria-item img {
+    display: block;
+    width: 100%; /* ajusta la imagen al ancho del contenedor */
+    height: auto; 
+    transition: transform 0.3s ease;
+}
+
+.galeria-item img:hover {
+    transform: scale(1.05);
+}
+
+.galeria-item h3 {
+    color: #095805 ;
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.galeria-item h5 {
+    color:#095805 ;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* SECCION CONTACTO MAPA Y FORMULARIO ------------------------------------------------------------------------------------*/
+#contactos {
+    padding-top: 20vh;
+    background-color: #FAF5E9;
+}
+
+.contenedor-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; /* espacio entre el mapa y el formulario */
+    padding: 20px; /* espacio interno del formu*/
+}
+
+.mapa {
+    margin-bottom: 20px;
+}
+
+.formulario {
+    flex: 1; /* ocupa el espacio disponible */
+    max-width: 400px; /* tamaño */
+}
+
+/* estilo del forms */
+.formulario form {
+    background-color: #FFF; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.formulario fieldset {
+    border: none; /* le saca el borde a fiel */
+    padding: 0;
+}
+
+.formulario p{
+    text-align: center;
+    color: #095805;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+}
+
+.formulario input[type="submit"],
+.formulario input[type="reset"] {
+    background-color: #FFCC00;
+    color: #009B4D;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.formulario input[type="submit"]:hover,
+.formulario input[type="reset"]:hover {
+    background-color: #009B4D;
+    color: #FFF;
+}
+
+/* SECCION REDES --------------------------------------------------------------------------------------------------- */
+
+#redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+#redes img {
+    width: 550px; /* Ajusta el tamaño según tus necesidades */
+    height: 300px; /* Ajusta el tamaño según tus necesidades */
+    object-fit: cover; /* Asegúrate de que la imagen se recorte si es necesario */
+    border-radius: 0; /* Asegúrate de que las imágenes no sean circulares */
+}
+
+#redes a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+}
+
+
+.red-social {
+    text-align: center; /* Centra el contenido dentro de cada div */
+    margin: 0 20px; /* Añade un margen para separar las redes sociales */
+  }
+  
+.btn-red-social {
+    background-color: #009B4D; /* Azul claro para un botón de Facebook */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+
+/* PIE DE PAG FOOTER----------------------------------------------------------------------------------------------- */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.iconos{
+    margin-bottom: 10px;
+}
+
+.iconos a{
+    color: #fff;
+    font-size: 24px; /* tamaño de los iconos */
+    margin: 0 10px;
+}
+
+
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
